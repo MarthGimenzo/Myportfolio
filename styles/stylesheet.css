@@ -30,6 +30,12 @@ h2 {
     color: #ed496f;
 }
 
+h3 {
+    font-family: 'a_goblin_appearsregular';
+    font-size: 15px;
+    color: #ed496f;
+}
+
 p {
     font-family: 'princess_saves_youregular';
     font-size: 18px;
@@ -43,4 +49,23 @@ img {
 .doubleborder {
     border-style: double;
     border-width: 6px;
+}
+
+.picture {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.bottom-right {
+    font-family: 'a_goblin_appearsregular';
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 12px;
+    color: #ed496f;
+}
+
+.class {
+    opacity: 1;
 }

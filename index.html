@@ -33,6 +33,7 @@
                     <p>Op deze pagina vind je links naar mijn werk, met een toelichting.</p>
                     <p>Ik ben benieuwd wat je er van vindt.</p>
                     <p>Groet, Jouke</p>
+                    <h3 id="blink" class="text-center">Press to close</h3>
                 </div>
             </div>
         </div>
@@ -70,7 +71,10 @@
         
         <!-- Additional Javascript -->
         <script>
-
+            var blink = document.getElementById("blink");
+            setInterval(function() {
+                blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+            }, 500);
         </script>
     </body>
 </html>
