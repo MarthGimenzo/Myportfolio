@@ -51,11 +51,23 @@ img {
     border-width: 6px;
 }
 
-.picture {
-    position: relative;
-    text-align: center;
-    color: white;
+.redborder {
+    border-style: solid;
+    border-width: 4px;
+    border-color: #ed496f;
 }
+
+.blinker {
+    max-width: 50%;
+    margin: auto;
+}
+
+@media only screen and (min-width: 600px) {
+    .picture {
+        max-width: 352px;
+    }
+}
+
 
 .bottom-right {
     font-family: 'a_goblin_appearsregular';

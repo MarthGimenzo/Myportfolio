@@ -6,6 +6,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
             <link rel="stylesheet" href="styles/stylesheet.css">
+            
         <title>Jouke's Portfolio</title>
     </head>
     <body>
@@ -14,29 +15,36 @@
 
     <div class="container">
         <h1 class="text-center mt-3 mb-3">Jouke's Portfolio</h1>
-        <div class="row">
-            <div class="offset-1 col-10 d-block d-sm-none p-0">
-                <img src="jouke8.png" class="w-100 rounded doubleborder mb-3" alt="Jouke">
-            </div>
-            <div class="col-4 pl-0">
-                <img src="jouke8.png" class="w-100 rounded doubleborder mb-3 d-none d-sm-block" alt="Jouke">
-            </div>
-            <div class="offset-1 offset-sm-0 col-10 col-sm-8 w-100 rounded doubleborder justify-content-center">
-                <div class="mt-2 mb-2">
-                    <p>Hoi! Ik ben Jouke</p>
-                    <p>Ik ben een creatieve, nieuwsgierige jongen met inlevingsvermogen en prettig in omgang.</p> 
-                    <p>Ik droom over de creatieve mogelijkheden en spreek wanneer nodig. </p>
-                    <p>Gedurende mijn tijd in de horeca creëerde ik graag waardevolle en meeslepende ervaringen voor mijn gasten.
-                    Dit zet ik graag door in de digitale wereld.</p>
-                    <p>Ik durf te experimenteren en daarmee zorg ik voor sfeervolle, humoristische ervaringen die mensen bij blijven.
-                    Daarom doe ik het graag nét even iets anders.</p>
-                    <p>Op deze pagina vind je links naar mijn werk, met een toelichting.</p>
-                    <p>Ik ben benieuwd wat je er van vindt.</p>
-                    <p>Groet, Jouke</p>
-                    <h3 id="blink" class="text-center">Press to close</h3>
+        <div id="introduction" class="row">
+            
+                <div class="offset-1 col-10 d-block d-sm-none p-0">
+                    <img src="jouke8.png" class="w-100 rounded doubleborder mb-3 picture" alt="Jouke">
                 </div>
-            </div>
+                <div class="col-4 pl-0">
+                    <img src="jouke8.png" class="w-100 rounded doubleborder mb-3 d-none d-sm-block picture" alt="Jouke">
+                </div>
+            
+                <div class="offset-1 offset-sm-0 pl-0 pr-0 col-10 col-sm-8 w-100 justify-content-center">
+                    <div class="rounded doubleborder">
+                        <div class="m-2">
+                            <p>Hoi! Ik ben Jouke</p>
+                            <p>Ik ben een creatieve, nieuwsgierige jongen met inlevingsvermogen en prettig in omgang.
+                            Ik droom over de creatieve mogelijkheden en spreek wanneer nodig. </p>
+                            <p>Gedurende mijn tijd in de horeca creëerde ik graag waardevolle en meeslepende ervaringen voor mijn gasten.
+                            Dit zet ik graag door in de digitale wereld.</p>
+                            <p>Ik durf te experimenteren en daarmee zorg ik voor sfeervolle, humoristische ervaringen die mensen bij blijven.
+                            Daarom doe ik het graag nét even iets anders.</p>
+                            <p>Op deze pagina vind je links naar mijn werk, met een toelichting.</p>
+                            <p>Ik ben benieuwd wat je er van vindt.</p>
+                            <p>Groet, Jouke</p>
+                        </div>
+                    </div>
+                </div>
+            
         </div>
+        
+            <h3 id="blink" class="mt-2 text-center redborder blinker">Press to close Introduction</h3>
+        
         <div class="row mt-3">
             <div class="offset-1 offset-sm-0 col-10 col-sm-12 rounded doubleborder">
                 <div class="mt-3">
@@ -65,16 +73,30 @@
         </div>
     </div>
         <!-- Javascript -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         
         <!-- Additional Javascript -->
         <script>
+            // Blinking text
             var blink = document.getElementById("blink");
             setInterval(function() {
                 blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
             }, 500);
+
+            // Close introduction
+            $( "#blink" ).click(function() {
+                $( "#introduction" ).slideToggle( "fast", function() {
+                    // Animation complete.
+                    $( "#blink" ).text("Press to open Introduction")
+                });
+            });
+
+            // Face animation
+            
+            setTimeout(function(){
+                $( ".picture" ).attr("src", "jouke8left.png");}, 500);
+            
         </script>
     </body>
 </html>
