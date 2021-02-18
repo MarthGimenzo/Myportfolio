@@ -36,6 +36,25 @@ h3 {
     color: #ed496f;
 }
 
+@media only screen and (max-width: 460px) {
+    h3 {
+        font-family: 'a_goblin_appearsregular';
+        font-size: 12px;
+        color: #ed496f;
+    }
+    .blinker {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 460px) {
+    .blinker {
+        width: 50%;
+        margin: auto;
+    }
+}
+
 p {
     font-family: 'princess_saves_youregular';
     font-size: 18px;
@@ -57,14 +76,15 @@ img {
     border-color: #ed496f;
 }
 
-.blinker {
-    max-width: 50%;
-    margin: auto;
+
+
+#blink {
+    cursor: pointer;
 }
 
 @media only screen and (min-width: 600px) {
     .picture {
-        max-width: 352px;
+        max-width: 342px;
     }
 }
 

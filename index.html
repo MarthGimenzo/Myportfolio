@@ -26,7 +26,7 @@
             
                 <div class="offset-1 offset-sm-0 pl-0 pr-0 col-10 col-sm-8 w-100 justify-content-center">
                     <div class="rounded doubleborder">
-                        <div class="m-2">
+                        <div class="m-2 maintext">
                             <p>Hoi! Ik ben Jouke</p>
                             <p>Ik ben een creatieve, nieuwsgierige jongen met inlevingsvermogen en prettig in omgang.
                             Ik droom over de creatieve mogelijkheden en spreek wanneer nodig. </p>
@@ -43,7 +43,7 @@
             
         </div>
         
-            <h3 id="blink" class="mt-2 text-center redborder blinker">Press to close Introduction</h3>
+        <h3 id="blink" class="mt-2 text-center redborder blinker">Press to close Introduction</h3>
         
         <div class="row mt-3">
             <div class="offset-1 offset-sm-0 col-10 col-sm-12 rounded doubleborder">
@@ -81,21 +81,44 @@
             // Blinking text
             var blink = document.getElementById("blink");
             setInterval(function() {
-                blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
-            }, 500);
+                if (turnedOn == false){
+                    blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+                }
+            }, 800);
 
-            // Close introduction
-            $( "#blink" ).click(function() {
-                $( "#introduction" ).slideToggle( "fast", function() {
-                    // Animation complete.
-                    $( "#blink" ).text("Press to open Introduction")
+            // Close and re-open introduction
+            var turnedOn = false
+            $("#blink").click(function() {
+                $("#introduction").slideToggle( "fast", function() {
+                    if (turnedOn) {
+                        $("#blink").text("Press to close Introduction")
+                        turnedOn = false;
+                    } else {
+                        $("#blink").text("Press to open Introduction")
+                        turnedOn = true;
+                        $('#blink').css('opacity', '1');
+                    }
                 });
             });
 
-            // Face animation
+            // Face animations
             
+            // Looking left and right
             setTimeout(function(){
-                $( ".picture" ).attr("src", "jouke8left.png");}, 500);
+            // NEXT FRAME
+                setTimeout(function(){
+                // NEXT FRAME
+                    setTimeout(function(){
+                    // NEXT FRAME
+                        setTimeout(function(){
+                        $( ".picture" ).attr("src", "jouke8right.png");}, 50);
+                    $( ".picture" ).attr("src", "jouke8mid.png");}, 2000);
+                $( ".picture" ).attr("src", "jouke8left.png");}, 50);
+            $( ".picture" ).attr("src", "jouke8mid.png");}, 50);
+            
+            
+            
+            
             
         </script>
     </body>
