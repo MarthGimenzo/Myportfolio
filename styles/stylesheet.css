@@ -36,6 +36,8 @@ h3 {
     color: #ed496f;
 }
 
+
+
 @media only screen and (max-width: 460px) {
     h3 {
         font-family: 'a_goblin_appearsregular';
@@ -53,6 +55,10 @@ h3 {
         width: 50%;
         margin: auto;
     }
+}
+
+.smallblinker {
+    width: 20%;
 }
 
 p {
