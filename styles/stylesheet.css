@@ -36,6 +36,12 @@ h3 {
     color: #ed496f;
 }
 
+a {
+    font-family: 'a_goblin_appearsregular';
+    font-size: 15px;
+    color: #ed496f;
+}
+
 ol {
     font-family: 'princess_saves_youregular';
     font-size: 18px;
@@ -88,9 +94,11 @@ img {
     border-color: #ed496f;
 }
 
-
-
 #blink {
+    cursor: pointer;
+}
+
+.mouseover {
     cursor: pointer;
 }
 
