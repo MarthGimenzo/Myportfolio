@@ -36,6 +36,10 @@ h3 {
     color: #ed496f;
 }
 
+ol {
+    font-family: 'princess_saves_youregular';
+    font-size: 18px;
+}
 
 
 @media only screen and (max-width: 460px) {
@@ -47,6 +51,7 @@ h3 {
     .blinker {
         width: 90%;
         margin: auto;
+        padding: 10px;
     }
 }
 
@@ -54,6 +59,7 @@ h3 {
     .blinker {
         width: 50%;
         margin: auto;
+        padding: 10px;
     }
 }
 
@@ -106,4 +112,13 @@ img {
 
 .class {
     opacity: 1;
+}
+
+.exhibittext {
+    text-align: justify;
+}
+
+.viewmore {
+    text-align: right;
+    padding: 10px;
 }
