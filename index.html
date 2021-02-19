@@ -18,10 +18,10 @@
         <div id="introduction" class="row">
             
                 <div class="offset-1 col-10 d-block d-sm-none p-0">
-                    <img src="jouke8.png" class="w-100 rounded doubleborder mb-3 picture" alt="Jouke">
+                    <img src="jouke8right.png" class="w-100 rounded doubleborder mb-3 picture" alt="Jouke">
                 </div>
                 <div class="col-4 pl-0">
-                    <img src="jouke8.png" class="w-100 rounded doubleborder mb-3 d-none d-sm-block picture" alt="Jouke">
+                    <img src="jouke8right.png" class="w-100 rounded doubleborder mb-3 d-none d-sm-block picture" alt="Jouke">
                 </div>
             
                 <div class="offset-1 offset-sm-0 pl-0 pr-0 col-10 col-sm-8 w-100 justify-content-center">
@@ -104,18 +104,122 @@
 
             // Face animations
             
-            // Looking left and right animation
-            setTimeout(function(){
-            // NEXT FRAME
+            lookLeftRight();
+
+            // Looking left and right animation (Initial animation)
+            function lookLeftRight(){
+                console.log("Initial animation")
                 setTimeout(function(){
                 // NEXT FRAME
                     setTimeout(function(){
                     // NEXT FRAME
                         setTimeout(function(){
-                        $( ".picture" ).attr("src", "jouke8right.png");}, 50);
-                    $( ".picture" ).attr("src", "jouke8mid.png");}, 2000);
-                $( ".picture" ).attr("src", "jouke8left.png");}, 50);
-            $( ".picture" ).attr("src", "jouke8mid.png");}, 50);
+                        // NEXT FRAME
+                            setTimeout(function(){
+                                setTimeout(function(){
+                                    randomizer();
+                                $( ".picture" ).attr("src", "jouke8right.png");}, 2000);
+                            $( ".picture" ).attr("src", "jouke8right.png");}, 50);
+                        $( ".picture" ).attr("src", "jouke8mid.png");}, 2000);
+                    $( ".picture" ).attr("src", "jouke8left.png");}, 50);
+                $( ".picture" ).attr("src", "jouke8mid.png");}, 50);
+            }
+            
+            var animation
+            function randomizer(){
+                animation = Math.floor(Math.random() * 4) + 1
+                
+                if (animation == 1){
+                    // Animatie 1 Wenkbrauwen op en neer
+                    setTimeout(function(){
+                        setTimeout(function(){
+                            setTimeout(function(){
+                                setTimeout(function(){
+                                    setTimeout(function(){
+                                        setTimeout(function(){
+                                            setTimeout(function(){
+                                                setTimeout(function(){
+                                                    setTimeout(function(){
+                                                        setTimeout(function(){
+                                                            // NEXT ANIMATION
+                                                            randomizer();
+                                                        $( ".picture" ).attr("src", "jouke8right.png");}, 3000);
+                                                    $( ".picture" ).attr("src", "jouke8right.png");}, 50);
+                                                $( ".picture" ).attr("src", "jouke8mid.png");}, 2000);
+                                            $( ".picture" ).attr("src", "jouke8left.png");}, 100);
+                                        $( ".picture" ).attr("src", "jouke8lefteyebrow.png");}, 100);
+                                    $( ".picture" ).attr("src", "jouke8left.png");}, 100);
+                                $( ".picture" ).attr("src", "jouke8lefteyebrow.png");}, 2000);
+                            $( ".picture" ).attr("src", "jouke8left.png");}, 50);
+                        $( ".picture" ).attr("src", "jouke8mid.png");}, 50);
+                    $( ".picture" ).attr("src", "jouke8right.png");}, 50)
+                } else if (animation == 2){
+                    // Animatie 2 Naar links kijken en knipperen
+                    setTimeout(function(){
+                        setTimeout(function(){
+                            setTimeout(function(){
+                                setTimeout(function(){
+                                    setTimeout(function(){
+                                        setTimeout(function(){
+                                            setTimeout(function(){
+                                                setTimeout(function(){
+                                                    setTimeout(function(){
+                                                        setTimeout(function(){
+                                                            // NEXT ANIMATION
+                                                            randomizer();
+                                                        $( ".picture" ).attr("src", "jouke8right.png");}, 3000);
+                                                    $( ".picture" ).attr("src", "jouke8right.png");}, 40);
+                                                $( ".picture" ).attr("src", "jouke8mid.png");}, 2000);
+                                            $( ".picture" ).attr("src", "jouke8left.png");}, 40);
+                                        $( ".picture" ).attr("src", "jouke8leftknip1.png");}, 40);
+                                    $( ".picture" ).attr("src", "jouke8leftknip2.png");}, 40);
+                                $( ".picture" ).attr("src", "jouke8leftknip1.png");}, 2000);
+                            $( ".picture" ).attr("src", "jouke8left.png");}, 40);
+                        $( ".picture" ).attr("src", "jouke8mid.png");}, 40);
+                    $( ".picture" ).attr("src", "jouke8right.png");}, 40);
+                } else if (animation == 3){
+                    // Animatie 3 Rechts 1 x knipperen
+                    setTimeout(function(){
+                        setTimeout(function(){
+                            setTimeout(function(){
+                                setTimeout(function(){
+                                    setTimeout(function(){
+                                        setTimeout(function(){
+                                            // NEXT ANIMATION
+                                            randomizer();
+                                        $( ".picture" ).attr("src", "jouke8right.png");}, 2000);
+                                    $( ".picture" ).attr("src", "jouke8right.png");}, 40);
+                                $( ".picture" ).attr("src", "jouke8rightknip1.png");}, 40);
+                            $( ".picture" ).attr("src", "jouke8rightknip2.png");}, 40);
+                        $( ".picture" ).attr("src", "jouke8rightknip1.png");}, 40);
+                    $( ".picture" ).attr("src", "jouke8right.png");}, 40);
+                } else {
+                    // Animatie 4 Rechts 2 x knipperen
+                    setTimeout(function(){
+                        setTimeout(function(){
+                            setTimeout(function(){
+                                setTimeout(function(){
+                                    setTimeout(function(){
+                                        setTimeout(function(){
+                                            setTimeout(function(){
+                                                setTimeout(function(){
+                                                    setTimeout(function(){
+                                                        setTimeout(function(){
+                                                            // NEXT ANIMATION
+                                                            randomizer();
+                                                        $( ".picture" ).attr("src", "jouke8right.png");}, 2500);
+                                                    $( ".picture" ).attr("src", "jouke8right.png");}, 40);
+                                                $( ".picture" ).attr("src", "jouke8rightknip1.png");}, 40);
+                                            $( ".picture" ).attr("src", "jouke8rightknip2.png");}, 40);
+                                        $( ".picture" ).attr("src", "jouke8rightknip1.png");}, 40);
+                                    $( ".picture" ).attr("src", "jouke8right.png");}, 40);
+                                $( ".picture" ).attr("src", "jouke8rightknip1.png");}, 40);
+                            $( ".picture" ).attr("src", "jouke8rightknip2.png");}, 40);
+                        $( ".picture" ).attr("src", "jouke8rightknip1.png");}, 40);
+                    $( ".picture" ).attr("src", "jouke8right.png");}, 40);
+                }
+            }
+
             
             
             
