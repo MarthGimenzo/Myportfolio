@@ -42,6 +42,15 @@ a {
     color: #ed496f;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+
 ol {
     font-family: 'princess_saves_youregular';
     font-size: 18px;

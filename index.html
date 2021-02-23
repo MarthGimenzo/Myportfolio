@@ -39,35 +39,53 @@
                 </div>
             </div>
         </div>
-        <h3 id="blink" class="mt-2 text-center redborder blinker">Press to close Introduction</h3>
-            <div class="mt-3 mb-5 row rounded doubleborder">
-                <div class="m-2 mt-3 offset-1 col-12 offset-sm-1 col-sm-8 offset-md-0 col-md-8 exhibittext">
-                        <h2 class="mb-3">1. Barbie Booth</h2>
-                        <p>As a response to an - almost traumatic - event in which my mother lost her very first Barbie Doll (it was actually the very first doll that was given away to the crowd during a huge Barbie launch event in Amsterdam, 1961), she started collecting all Barbie Dolls that were released between 1961 and 1980.</p>
-                    <h3 id="click1" class="m-3 mx-auto text-center redborder viewmore w-50 mouseover">Bekijk meer</h3>
-                </div>
-                <div class="col-md-3 p-0 my-auto">
-                    <img src="barbieboothpixel.png" class="w-100 rounded doubleborder m-2" alt="Jouke">
-                </div>
+        <h3 id="blink" class="mt-2 text-center redborder blinker">Sluiten</h3>
+        <span id="description1jump"></span>
+        <div class="mt-3 mb-5 row rounded doubleborder">
+            <div class="m-2 mt-3 offset-1 col-12 offset-sm-1 col-sm-8 offset-md-0 col-md-8 exhibittext">
+                    <h2 class="mb-3">1. Barbie Booth</h2>
+                    <p>As a response to an - almost traumatic - event in which my mother lost her very first Barbie Doll (it was actually the very first doll that was given away to the crowd during a huge Barbie launch event in Amsterdam, 1961), she started collecting all Barbie Dolls that were released between 1961 and 1980.</p>
+                <h3 id="click1" class="m-3 mx-auto text-center redborder viewmore w-50 mouseover">Bekijk meer</h3>
+            </div>
+            <div class="col-md-3 p-0 my-auto">
+                <img src="barbieboothpixel.png" class="w-100 rounded doubleborder m-2" alt="Jouke">
+            </div>
             <div style="display: none;" id="description1" class="col-12">
                 <h2 class="mb-3">Beschrijving</h2>
                 <p>Barbie Booth utilises a colour scheme of 8 different colours. Pink and yellow colours are the mainly used colours. The pink colours are used because, of course, these are the colours of the Barbie brand. To complement this colour, mint and yellow are used. This gives the website a playful, seventies style feeling.</p>
-                <h2 class="mb-3">Gebruikte Skills</h2>
+                <h2 class="mb-3">Talen</h2>
                 <ol>
-                    <li>HTML</li>
-                    <li>CSS3</li>
-                    <li>JavaScript</li>
-                    <li>Python</li>
+                    <li style="list-style-image: url('html5.png');">HTML</li>
+                    <li style="list-style-image: url('css3.png');">CSS3</li>
+                    <li style="list-style-image: url('javascript.png');">JavaScript</li>
+                    <li style="list-style-image: url('python.png');">Python</li>
                 </ol>
-
-                <h3 class="m-3 mx-auto text-center redborder viewmore w-50 mouseover"><a href="https://barbiebooth.herokuapp.com/" target="_blank">Ga naar website</a></h3>
+                <h2 class="mb-3">Frameworks & Libraries</h2>
+                <ol>
+                    <li style="list-style-image: url('jquery.png');">jQuery</li>
+                    <li style="list-style-image: url('django.png');">Django</li>
+                </ol>
+                <h2 class="mb-3">Tools</h2>
+                <ol>
+                    <li style="list-style-image: url('photoshop.png');">Adobe Photoshop</li>
+                    <li style="list-style-image: url('illustrator.png');">Adobe Illustrator</li>
+                </ol>
+                <div class="row">
+                <div class="col-6">
+                    <h3 id="clickclose1"class="m-3 mx-auto text-center redborder viewmore w-75 mouseover">Sluiten</h3>
+                </div>
+                <div class="col-6">
+                    <h3 class="m-2 mx-auto text-center redborder viewmore w-75 mouseover"><a href="https://barbiebooth.herokuapp.com/" target="_blank">Ga naar website</a></h3>
+                </div>
             </div>
-                
-
-                
             </div>
             
-        
+
+            
+        </div>
+        <div class="col-12">
+            
+        </div>
 
         
 
@@ -92,10 +110,10 @@
             $("#blink").click(function() {
                 $("#introduction").slideToggle( "fast", function() {
                     if (turnedOn) {
-                        $("#blink").text("Press to close Introduction")
+                        $("#blink").text("Sluiten")
                         turnedOn = false;
                     } else {
-                        $("#blink").text("Press to open Introduction")
+                        $("#blink").text("Open")
                         turnedOn = true;
                         $('#blink').css('opacity', '1');
                     }
@@ -105,9 +123,17 @@
             // Open and close description1
 
             $("#click1").click(function(){
-                console.log("Hallo")
-                $("#description1").slideToggle( "fast", function() {
-                    
+                    console.log("Hallo")
+                    $( "#click1" ).addClass( "d-none" );
+                    $("#description1").slideToggle( "fast", function() {
+                        document.getElementById("description1jump").scrollIntoView({behavior: 'smooth'});
+                });
+                
+            });
+            $("#clickclose1").click(function(){
+                    console.log("Hallo")
+                    $( "#click1" ).removeClass( "d-none" );
+                    $("#description1").slideToggle( "fast", function() {
                 });
             });
 
