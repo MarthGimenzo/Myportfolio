@@ -39,7 +39,7 @@
                 </div>
             </div>
         </div>
-        <h3 id="blink" class="my-3 text-center redborder blinker">Sluiten</h3>
+        <h3 id="blink" class="my-3 text-center redborder blinker"><img src="close.png" class="pb-1" alt="Sluiten">  Sluiten</h3>
 
         <!-- Exhibit 1 -->
         <span id="description1jump"></span>
@@ -51,7 +51,7 @@
                         <h2 class="">Barbie Booth</h2>
                         <img src="barbieboothpixel.png" class="w-100 rounded doubleborder my-3 d-md-none" alt="Jouke">
                         <p class="mt-2">As a response to an - almost traumatic - event in which my mother lost her very first Barbie Doll (it was actually the very first doll that was given away to the crowd during a huge Barbie launch event in Amsterdam, 1961), she started collecting all Barbie Dolls that were released between 1961 and 1980.</p>
-                        <h3 id="click1" class="m-3 mx-auto text-center redborder viewmore w-50 mouseover">Bekijk meer</h3>
+                        <h3 id="click1" class="m-3 mx-auto text-center redborder viewmore w-50 mouseover"><img src="open.png" class="pb-1" alt="Bekijk meer">  Bekijk meer</h3>
                     </div>
                     <div class="col-12 col-md-6 my-auto d-none d-md-block">
                         <img src="barbieboothpixel.png" class="w-100 rounded doubleborder my-3" alt="Jouke">
@@ -80,15 +80,17 @@
                         
                         <div class="row mx-auto">
                             <div class="col-12 px-0 mb-2">
-                                <h3 id="" class="text-center redborder viewmore mouseover mx-2 px-0"><img src="githubpagesite.png" class="pb-1" alt="Jouke">  GitHub</h3>
-                            </div>
-                            <div class="col-6 px-0 mb-2">
-                                <h3 id="clickclose1" class="text-center redborder viewmore mouseover mx-2 px-0">Sluiten</h3>
-                            </div>
-                            <div class="col-6 px-0 mb-2">
-                                <a href="https://barbiebooth.herokuapp.com/" target="_blank">
-                                    <h3 class="text-center redborder viewmore mouseover mx-2 px-0">Website</h3>
+                                <a href="https://github.com/MarthGimenzo/barbiebooth" target="_blank">
+                                    <h3 class="text-center redborder viewmore mouseover mx-2 px-0"><img src="github.png" class="pb-1" alt="GitHub">  GitHub</h3>
                                 </a>
+                            </div>
+                            <div class="col-12 px-0 mb-2">
+                                <a href="https://barbiebooth.herokuapp.com/" target="_blank">
+                                    <h3 class="text-center redborder viewmore mouseover mx-2 px-0"><img src="website.png" class="pb-1" alt="GitHub">  Website</h3>
+                                </a>
+                            </div>
+                            <div class="col-12 px-0 mb-2">
+                                <h3 id="clickclose1" class="text-center redborder viewmore mouseover mx-2 px-0"><img src="close.png" class="pb-1" alt="Sluiten">  Sluiten</h3>
                             </div>
                         </div>
                     </div>
@@ -157,6 +159,7 @@
         
         <!-- Additional Javascript -->
         <script>
+
             // Blinking text
             var blink = document.getElementById("blink");
             setInterval(function() {
@@ -165,12 +168,23 @@
                 }
             }, 800);
 
+            // Change color of picture on mouseover
+            $(".redborder").mouseover(function(){
+                console.log("Mouseover")
+                $(this).children('img').css( "filter", "brightness(0) invert(1)")
+            })
+
+            $(".redborder").mouseleave(function(){
+                console.log("Mouseleave")
+                $(this).children('img').css( "filter", "brightness(1) invert(0)")
+            })
+
             // Close and re-open introduction
             var turnedOn = false
             $("#blink").click(function() {
                 $("#introduction").slideToggle( "fast", function() {
                     if (turnedOn) {
-                        $("#blink").text("Sluiten")
+                        $("#blink").text("<img src='close.png' class='pb-1' alt='Sluiten'>  Sluiten")
                         turnedOn = false;
                     } else {
                         $("#blink").text("Open")

@@ -133,6 +133,14 @@ img {
     border-color: #ed496f;
 }
 
+.redborder:hover {
+    border-style: solid;
+    border-width: 4px;
+    border-color: #ed496f;
+    background-color: #ed496f;
+    color: white;
+}
+
 #blink {
     cursor: pointer;
 }
