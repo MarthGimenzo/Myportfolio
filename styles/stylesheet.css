@@ -52,6 +52,11 @@ ol {
     font-size: 18px;
 }
 
+ul {
+    font-family: 'princess_saves_youregular';
+    font-size: 18px;
+}
+
 @media only screen and (max-width: 541px) {
     h2 {
         font-family: 'a_goblin_appearsregular';
