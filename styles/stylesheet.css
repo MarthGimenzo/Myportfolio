@@ -19,14 +19,8 @@
 }
 
 body {
-    background: url('/background.png');
+    background: url('background.png');
     
-}
-
-@-webkit-keyframes diagonal {
-    0%       { transform: translatex(-30px) translatey(-30px) }
-    50%      { transform: translatex(20px) translatey(20px); }
-    100%     { transform: translatex(-30px) translatey(-30px) }
 }
 
 h1 {
