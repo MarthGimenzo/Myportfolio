@@ -18,6 +18,17 @@
 
 }
 
+body {
+    background: url('/background.png');
+    
+}
+
+@-webkit-keyframes diagonal {
+    0%       { transform: translatex(-30px) translatey(-30px) }
+    50%      { transform: translatex(20px) translatey(20px); }
+    100%     { transform: translatex(-30px) translatey(-30px) }
+}
+
 h1 {
     font-family: 'a_goblin_appearsregular';
     font-size: 27px;
@@ -125,6 +136,10 @@ a:link {
 img {
   image-rendering: auto;
   image-rendering: pixelated;
+}
+
+.bgwhite {
+    background: white;
 }
 
 .doubleborder {
