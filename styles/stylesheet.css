@@ -20,7 +20,20 @@
 
 body {
     background: url('background.png');
-    
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    background: url('background.png') repeat;
+    animation: backgroundScroll 1s linear infinite;
+}
+
+@keyframes backgroundScroll {
+	0% {
+    background-position: 0 0;
+  }
+	100% {
+    background-position: 32px -32px;
+  }
 }
 
 h1 {
@@ -87,7 +100,7 @@ ul {
     ol {
     font-family: 'princess_saves_youregular';
     font-size: 16px;
-}
+    }
 }
 
 
