@@ -13,7 +13,7 @@
 
     <div class="bg-scroll"></div>
     <!-- Modal -->
-    <!--
+   <span id="toppage"></span>
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg doubleborder rounded bgwhite " role="document">
             <div class="modal-content border-0">
@@ -52,6 +52,7 @@
     <!-- Context -->
 
     <div class="container">
+        
         <h1 class="text-center mt-3 mb-3">Jouke's Portfolio</h1>
         <div id="introduction" class="row">
             <div class="offset-1 col-10 d-block d-sm-none p-0">
@@ -99,7 +100,7 @@
                         <img src="penguinspixel.png" class="w-100 rounded doubleborder my-3" alt="Jouke">
                     </div>
                     <div style="display: none;" id="description1" class="col-12">
-                       
+                        <span id="description1more"></span>
                         <h2 class="mb-3">Talen</h2>
                         <ol>
                             <li style="list-style-image: url('html5.png');">HTML</li>
@@ -160,7 +161,7 @@
                         <img src="customartistpixel.png" class="w-100 rounded doubleborder my-3" alt="Jouke">
                     </div>
                     <div style="display: none;" id="description2" class="col-12">
-                        
+                        <span id="description2more"></span>
                         <h2 class="mb-3">Talen</h2>
                         <ol>
                             <li style="list-style-image: url('html5.png');">HTML</li>
@@ -225,7 +226,7 @@
                         <img src="barbieboothpixel.png" class="w-100 rounded doubleborder my-3" alt="Jouke">
                     </div>
                     <div style="display: none;" id="description3" class="col-12">
-                        
+                        <span id="description3more"></span>
                         <h2 class="mb-3">Talen</h2>
                         <ol>
                             <li style="list-style-image: url('html5.png');">HTML</li>
@@ -281,9 +282,9 @@
         <!-- Additional Javascript -->
         <script>
             var audio_close = new Audio('sfx_sounds_button1.wav');
-            audio_close.volume = 0.2;
+            audio_close.volume = 0.6;
             var audio_open = new Audio('sfx_sounds_fanfare2.wav');
-            audio_open.volume = 0.2;
+            audio_open.volume = 0.6;
             $('#myModal').modal()
 
             // Blinking text
@@ -321,6 +322,7 @@
                         $("#blink").text("Open Introductie")
                         turnedOn = true;
                         $('#blink').css('opacity', '1');
+                        document.getElementById("toppage").scrollIntoView({behavior: 'smooth'});
                     }
                 });
             });
@@ -331,7 +333,7 @@
                     $( "#click1" ).addClass( "d-none" );
                     $("#description1").slideToggle( "fast", function() {
                         audio_open.play();
-                        document.getElementById("description1jump").scrollIntoView({behavior: 'smooth'});
+                        document.getElementById("description1more").scrollIntoView({behavior: 'smooth'});
                 });
             });
             $("#clickclose1").click(function(){
@@ -348,7 +350,7 @@
                     $( "#click2" ).addClass( "d-none" );
                     $("#description2").slideToggle( "fast", function() {
                         audio_open.play();
-                        document.getElementById("description2jump").scrollIntoView({behavior: 'smooth'});
+                        document.getElementById("description2more").scrollIntoView({behavior: 'smooth'});
                 });
             });
             $("#clickclose2").click(function(){
@@ -365,7 +367,7 @@
                     $( "#click3" ).addClass( "d-none" );
                     $("#description3").slideToggle( "fast", function() {
                         audio_open.play();
-                        document.getElementById("description3jump").scrollIntoView({behavior: 'smooth'});
+                        document.getElementById("description3more").scrollIntoView({behavior: 'smooth'});
                 });
             });
             $("#clickclose3").click(function(){
