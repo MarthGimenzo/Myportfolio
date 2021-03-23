@@ -12,42 +12,9 @@
     <body>
 
     <div class="bg-scroll"></div>
-    <!-- Modal -->
-   <span id="toppage"></span>
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg doubleborder rounded bgwhite " role="document">
-            <div class="modal-content border-0">
-                <div class="modal-header border-0">
-                    <h2 class="modal-title" id="exampleModalLabel">Kies een thema</h2>
-                </div>
-                <div class="modal-body border-0">
-                    <div class="card-group">
-                        <div class="card border-0 m-1">
-                            <img class="card-img-top doubleborder rounded" src="theme1.png" alt="Card image cap">
-                            <div class="card-body">
-                            </div>
-                        </div>
-                        <div class="card border-0 m-1">
-                            <img class="card-img-top doubleborder rounded" src="theme2.png" alt="Card image cap">
-                            <div class="card-body">
-                            </div>
-                        </div>
-                        <div class="card border-0 m-1">
-                            <img class="card-img-top doubleborder rounded" src="penguinspixel.png" alt="Card image cap">
-                            <div class="card-body">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--
-                <div class="modal-footer border-0">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-                -->
-            </div>
-        </div>
-    </div>
+
+    <span id="toppage"></span>
+   
 
     <!-- Context -->
 
@@ -55,18 +22,28 @@
         
         <h1 class="text-center mt-3 mb-3">Jouke's Portfolio</h1>
         <div id="introduction" class="row">
-            <div class="offset-1 col-10 d-block d-sm-none p-0">
-                <img src="jouke8right.png" class="w-100 rounded doubleborder picture mb-3 bgwhite" alt="Jouke">
-            </div>
-            <div class="col-4 pl-0">
-                <img src="jouke8right.png" class="w-100 rounded doubleborder d-none d-sm-block picture bgwhite" alt="Jouke">
-            </div>
+                <!-- FOTO-->
+                <div class="changePicture fotoPixel fotoPixel_klein offset-1 col-10 d-block d-sm-none p-0">
+                    <img src="jouke8right.png" class="w-100 rounded doubleborder picture mb-3 bgwhite" alt="Jouke">
+                    <div class="offset-1 d-block d-sm-none col-10 px-0 mb-3">
+                        <a href="https://www.linkedin.com/in/jouke-de-vries-770b2075/" target="_blank">
+                            <h3 class="text-center redborder bgwhite viewmore mouseover">LinkedIn</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="changePicture fotoPixel fotoPixel_groot col-4 pl-0">
+                    <img src="jouke8right.png" class="w-100 rounded doubleborder d-none d-sm-block picture bgwhite" alt="Jouke">
+                    <div class="d-none d-sm-block col-12 px-0 mb-2 mt-2">
+                        <a href="https://www.linkedin.com/in/jouke-de-vries-770b2075/" target="_blank">
+                            <h3 class="text-center redborder bgwhite viewmore picture mouseover">LinkedIn</h3>
+                        </a>
+                    </div>
+                </div>
+            
             <div class="offset-1 offset-sm-0 pl-0 pr-0 col-10 col-sm-8 w-100 justify-content-center">
                 <div class="rounded doubleborder bgwhite">
                     <div class="m-2 maintext">
-                        <p>Je hebt de QR code gescand! Cool!</p>
-                        <p>Ik ben Jouke.</p>
-                        <p>Welkom!</p>
+                        <p>Ik ben Jouke, welkom!</p>
                         <p>In mijn CV en dit portfolio wil ik graag de belevenis creëren van een videogame. Nog steeds aan het fine-tunen terwijl je dit leest, want het kan natuurlijk altijd beter.</p>
                         <p>Coderen geeft je de vrijheid om te maken wat je wil. Er zijn geen grenzen, zolang je de kennis hebt. Deze website heb ik gemaakt met de kennis die ik heb, evenals de websites die je in dit portfolio kunt bekijken.</p>
                         <p>Al deze projecten heb ik als opdracht binnen mijn opleiding afgerond.</p>
@@ -281,6 +258,8 @@
         
         <!-- Additional Javascript -->
         <script>
+            let animationFunction = true;
+            let truePicture = true;
             var audio_close = new Audio('sfx_sounds_button1.wav');
             audio_close.volume = 0.6;
             var audio_open = new Audio('sfx_sounds_fanfare2.wav');
@@ -307,6 +286,7 @@
                 $(this).children('img').css( "filter", "brightness(1) invert(0)")
             })
 
+            
             // Close and re-open introduction
             var turnedOn = false
             $("#blink").click(function() {
@@ -381,7 +361,7 @@
             // Face animations
             
             lookLeftRight();
-
+            console.log("Deze dan?")
             // Looking left and right animation (Initial animation)
             function lookLeftRight(){
                 console.log("Initial animation")
@@ -402,11 +382,16 @@
             }
 
             var animation
-            function randomizer(){
+            
+                console.log("So it is true");
+                function randomizer(){
+                console.log(animationFunction);
+                console.log("Randomizer wordt uitgevoerd");
                 animation = Math.floor(Math.random() * 4) + 1
                 
                 if (animation == 1){
                     // Animatie 1 Wenkbrauwen op en neer
+                    console.log("Wenkbrauwen op en neer");
                     setTimeout(function(){
                         setTimeout(function(){
                             setTimeout(function(){
@@ -431,6 +416,7 @@
                     $( ".picture" ).attr("src", "jouke8right.png");}, 50)
                 } else if (animation == 2){
                     // Animatie 2 Naar links kijken en knipperen
+                    console.log("Naar links kijken en knipperen");
                     setTimeout(function(){
                         setTimeout(function(){
                             setTimeout(function(){
@@ -455,6 +441,7 @@
                     $( ".picture" ).attr("src", "jouke8right.png");}, 40);
                 } else if (animation == 3){
                     // Animatie 3 Rechts 1 x knipperen
+                    console.log("Rechts 1x knipperen");
                     setTimeout(function(){
                         setTimeout(function(){
                             setTimeout(function(){
@@ -471,6 +458,7 @@
                     $( ".picture" ).attr("src", "jouke8right.png");}, 40);
                 } else {
                     // Animatie 4 Rechts 2 x knipperen
+                    console.log("Rechts 2x knipperenr");
                     setTimeout(function(){
                         setTimeout(function(){
                             setTimeout(function(){
@@ -495,6 +483,8 @@
                     $( ".picture" ).attr("src", "jouke8right.png");}, 40);
                 }
             }
+
+            
 
             
             
